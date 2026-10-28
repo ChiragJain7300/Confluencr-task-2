@@ -85,8 +85,9 @@ export const listTransactions = async (
     prisma.transaction.findMany({
       where: whereClause,
       orderBy: { createdAt: 'desc' }, // latest first, as required by the spec
-      skip,
-      take: options.limit,
+      // Ensure these are integers — Prisma 7 rejects strings for skip/take
+      skip: Math.floor(skip),
+      take: Math.floor(options.limit),
     }),
   ]);
 

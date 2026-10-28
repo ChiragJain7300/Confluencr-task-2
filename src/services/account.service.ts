@@ -27,3 +27,4 @@ export const getAccount = async (accountId: string): Promise<AccountRow> => {
 
   return account;
 };
+
