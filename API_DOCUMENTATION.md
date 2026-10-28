@@ -245,3 +245,4 @@ curl -X POST http://localhost:3000/api/v1/transfers \
   -H "Content-Type: application/json" \
   -d '{"source_account_id":"<ID_A>","destination_account_id":"<ID_B>","amount":25,"description":"Split bill","reference_id":"tr-1"}'
 ```
+

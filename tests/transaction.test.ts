@@ -211,3 +211,4 @@ describe('Transaction Endpoints', () => {
     expect(debitsOnlyRes.body.data.transactions[0].type).toBe('debit');
   });
 });
+

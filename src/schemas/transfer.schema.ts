@@ -33,3 +33,4 @@ export const transferSchema = z
   });
 
 export type TransferBody = z.infer<typeof transferSchema>;
+

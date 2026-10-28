@@ -96,3 +96,4 @@ The specification requires:
 
 - The `createAccountSchema` Zod validation schema strictly accepts only `{ "name": string }`. Any other fields are stripped.
 - The `createAccountInDatabase` repository function does not accept a balance argument; the database schema defaults `balance` to `0.0000`.
+

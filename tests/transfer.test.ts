@@ -160,3 +160,4 @@ describe('Money Transfer Endpoints (Bonus)', () => {
     expect(Number(resB.body.data.balance)).toBe(50);
   });
 });
+

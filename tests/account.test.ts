@@ -61,3 +61,4 @@ describe('Account Endpoints', () => {
     expect(response.body.error.code).toBe('ACCOUNT_NOT_FOUND');
   });
 });
+
