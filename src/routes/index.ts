@@ -1,12 +1,17 @@
 import { Router } from 'express';
 import { validateRequest } from '../middlewares/validate.js';
 import { createAccountSchema } from '../schemas/account.schema.js';
-import { addTransactionSchema, listTransactionsQuerySchema } from '../schemas/transaction.schema.js';
+import {
+  addTransactionSchema,
+  listTransactionsQuerySchema,
+} from '../schemas/transaction.schema.js';
+import { transferSchema } from '../schemas/transfer.schema.js';
 import { createAccountHandler, getAccountHandler } from '../controllers/account.controller.js';
 import {
   addTransactionHandler,
   listTransactionsHandler,
 } from '../controllers/transaction.controller.js';
+import { transferHandler } from '../controllers/transfer.controller.js';
 
 const router = Router();
 
@@ -34,5 +39,11 @@ router.get(
   listTransactionsHandler
 );
 
-export default router;
+// POST /api/v1/transfers — transfer funds between two accounts (Bonus)
+router.post(
+  '/transfers',
+  validateRequest({ body: transferSchema }),
+  transferHandler
+);
 
+export default router;
