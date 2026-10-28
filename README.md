@@ -172,7 +172,10 @@ npm test
 
 ## API Overview
 
-Detailed documentation and examples are available in [API_DOCUMENTATION.md](./API_DOCUMENTATION.md).
+Interactive Swagger UI documentation is available when running the server at:
+👉 **[http://localhost:3000/docs](http://localhost:3000/docs)** (or `/api-docs`)
+
+A complete offline reference is also available in [API_DOCUMENTATION.md](./API_DOCUMENTATION.md).
 
 | Method | Endpoint | Description |
 |:-------|:---------|:------------|
